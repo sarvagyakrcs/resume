@@ -8,7 +8,6 @@ const nextConfig = {
         "fastly.picsum.photos"
       ]
     },
-    basePath: "/resume",
   };
 
 export default nextConfig;
