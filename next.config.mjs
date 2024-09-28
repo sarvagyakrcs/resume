@@ -7,7 +7,8 @@ const nextConfig = {
         "img.clerk.com",
         "fastly.picsum.photos"
       ]
-    }
+    },
+    basePath: "/resume",
   };
 
 export default nextConfig;
