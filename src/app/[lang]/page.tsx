@@ -176,7 +176,6 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
                   <Skeleton className="h-4 w-full" />
                 ) : (
                   <>
-                    <Link href="tel:+918279959965" className="hover:underline block sm:inline">+91-8279959965</Link>
                     <span className="hidden sm:inline">•</span>
                     <Link href="mailto:sarvagyakrcs@gmail.com" className="hover:underline block sm:inline">sarvagyakrcs@gmail.com</Link>
                     <span className="hidden sm:inline">•</span>
