@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Mail, Phone, Twitter, Github, Linkedin, Moon, Sun, Sparkles } from 'lucide-react'
+import { Mail, Phone, Twitter, Github, Linkedin, Moon, Sun, Sparkles, Menu } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
@@ -11,6 +11,12 @@ import { useTheme } from "next-themes"
 import { motion, AnimatePresence } from 'framer-motion'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { cn as cnf } from '@/lib/utils'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 // Import translations
 import en from '@/locales/en.json'
@@ -61,7 +67,7 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
     setTimeout(() => setLoading(false), 0)
     const avatarIntervalId = setInterval(() => {
       setCurrentAvatar((prev) => (prev + 1) % avatars.length)
-    }, 5000)
+    }, 5000) // Change avatar every 5 seconds
     return () => {
       clearInterval(avatarIntervalId)
     }
@@ -85,8 +91,8 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
   )
 
   return (
-    <div className="min-h-screen bg-white text-black dark:bg-slate-900 p-8 relative overflow-hidden">
-      <div className="relative z-10 max-w-4xl mx-auto space-y-8">
+    <div className="min-h-screen bg-white text-black dark:bg-slate-900 p-4 sm:p-8 relative overflow-hidden">
+      <div className="relative z-10 max-w-4xl mx-auto space-y-6 sm:space-y-8">
         <motion.div 
           className="sticky top-0 bg-background/80 backdrop-blur-sm shadow-sm p-4 z-20 rounded-lg"
           initial={{ y: -100 }}
@@ -94,7 +100,22 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
           transition={{ type: "spring", stiffness: 100 }}
         >
           <div className="flex justify-between items-center max-w-4xl mx-auto">
-            <div className="flex flex-wrap gap-2">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="icon" className="sm:hidden dark:text-white">
+                  <Menu className="h-[1.2rem] w-[1.2rem]" />
+                  <span className="sr-only">Toggle menu</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                {(Object.keys(translations) as Lang[]).map((lang) => (
+                  <DropdownMenuItem key={lang} onClick={() => handleLanguageChange(lang)}>
+                    {languageNames[lang]}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <div className="hidden sm:flex flex-wrap gap-2">
               {(Object.keys(translations) as Lang[]).map((lang) => (
                 <motion.div key={lang} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button 
@@ -113,6 +134,7 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
                 variant="ghost"
                 size="icon"
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className='dark:text-white'
               >
                 <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                 <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
@@ -138,7 +160,7 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
                   <AvatarFallback>SK</AvatarFallback>
                 </Avatar>
               </motion.div>
-              <CardTitle className="text-4xl font-bold flex items-center justify-center">
+              <CardTitle className="text-3xl sm:text-4xl font-bold flex items-center justify-center">
                 {loading ? <Skeleton className="h-10 w-3/4 mx-auto" /> : (
                   <>
                     {t.name}
@@ -152,16 +174,16 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
                   </>
                 )}
               </CardTitle>
-              <div className="text-sm text-muted-foreground space-x-2">
+              <div className="text-xs sm:text-sm text-muted-foreground space-y-1 sm:space-y-0 sm:space-x-2">
                 {loading ? (
                   <Skeleton className="h-4 w-full" />
                 ) : (
                   <>
-                    <Link href="tel:+918279959965" className="hover:underline">+91-8279959965</Link>
-                    <span>•</span>
-                    <Link href="mailto:sarvagyakrcs@gmail.com" className="hover:underline">sarvagyakrcs@gmail.com</Link>
-                    <span>•</span>
-                    <Link href="https://twitter.com/kumar_sarvagya" className="hover:underline">@kumar_sarvagya</Link>
+                    <Link href="tel:+918279959965" className="hover:underline block sm:inline">+91-8279959965</Link>
+                    <span className="hidden sm:inline">•</span>
+                    <Link href="mailto:sarvagyakrcs@gmail.com" className="hover:underline block sm:inline">sarvagyakrcs@gmail.com</Link>
+                    <span className="hidden sm:inline">•</span>
+                    <Link href="https://twitter.com/kumar_sarvagya" className="hover:underline block sm:inline">@kumar_sarvagya</Link>
                   </>
                 )}
               </div>
@@ -169,9 +191,9 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
                 <Skeleton className="h-4 w-1/2 mx-auto" />
               ) : (
                 <>
-                  <p className="text-sm text-muted-foreground">{t.education}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">{t.education}</p>
                   <motion.p 
-                    className="text-sm font-semibold"
+                    className="text-xs sm:text-sm font-semibold"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
@@ -197,7 +219,7 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
                 <CardTitle>{t.about_me}</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="list-disc pl-5 space-y-1 text-sm">
+                <ul className="list-disc pl-5 space-y-1 text-xs sm:text-sm">
                   {t.about_me_points.map((point: string, index: number) => (
                     <motion.li 
                       key={index}
@@ -227,12 +249,12 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
                 <CardTitle>{t.key_competencies}</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4">
                   <div>
-                    <h3 className="font-semibold mb-2">{t.proficient_full_stack}</h3>
-                    <p className="text-sm text-muted-foreground">{t.full_stack_description}</p>
+                    <h3 className="font-semibold mb-2 text-sm sm:text-base">{t.proficient_full_stack}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{t.full_stack_description}</p>
                   </div>
-                  <ul className="list-disc pl-5 space-y-1 text-sm">
+                  <ul className="list-disc pl-5 space-y-1 text-xs sm:text-sm">
                     {t.competencies.map((competency: string, index: number) => (
                       <motion.li 
                         key={index}
@@ -270,9 +292,9 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <h3 className="font-semibold">{exp.title}</h3>
-                    <p className="text-sm text-muted-foreground">{exp.date}</p>
-                    <p className="text-sm">{exp.description}</p>
+                    <h3 className="font-semibold text-sm sm:text-base">{exp.title}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{exp.date}</p>
+                    <p className="text-xs sm:text-sm">{exp.description}</p>
                   </motion.div>
                 ))}
               </CardContent>
@@ -280,7 +302,7 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
           </motion.div>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8">
           {loading ? (
             <SkeletonCard />
           ) : (
@@ -301,8 +323,8 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
-                      <p className="font-semibold">{item.title}</p>
-                      <p className="text-sm text-muted-foreground">{item.institution}</p>
+                      <p className="font-semibold text-sm sm:text-base">{item.title}</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">{item.institution}</p>
                     </motion.div>
                   ))}
                 </CardContent>
@@ -323,8 +345,8 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
                   <CardTitle>{t.extracurricular_activities}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="font-semibold">{t.conference_title}</p>
-                  <p className="text-sm">{t.conference_description}</p>
+                  <p className="font-semibold text-sm sm:text-base">{t.conference_title}</p>
+                  <p className="text-xs sm:text-sm">{t.conference_description}</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -339,7 +361,7 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
           <Button 
             onClick={() => setContactOpen(true)} 
             size="lg" 
-            className="bg-primary text-primary-foreground hover:bg-primary/90"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto"
           >
             {t.contact_me}
           </Button>
@@ -348,7 +370,7 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
         <AnimatePresence>
           {contactOpen && (
             <motion.div 
-              className="fixed inset-0 bg-background/50 backdrop-blur-sm flex items-center justify-center z-50"
+              className="fixed inset-0 bg-background/50 backdrop-blur-sm flex items-center justify-center z-50 p-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -358,31 +380,32 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
                 transition={{ type: "spring", damping: 15 }}
+                className="w-full max-w-md"
               >
-                <Card className="w-96">
+                <Card>
                   <CardHeader>
                     <CardTitle>{t.contact_me}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <motion.div className="flex items-center space-x-2" whileHover={{ x: 5 }}>
                       <Phone className="w-5 h-5" />
-                      <span>+91-8279959965</span>
+                      <span className="text-sm">+91-8279959965</span>
                     </motion.div>
                     <motion.div className="flex items-center space-x-2" whileHover={{ x: 5 }}>
                       <Mail className="w-5 h-5" />
-                      <span>sarvagyakrcs@gmail.com</span>
+                      <span className="text-sm">sarvagyakrcs@gmail.com</span>
                     </motion.div>
                     <motion.div className="flex items-center space-x-2" whileHover={{ x: 5 }}>
                       <Twitter className="w-5 h-5" />
-                      <span>@kumar_sarvagya</span>
+                      <span className="text-sm">@kumar_sarvagya</span>
                     </motion.div>
                     <motion.div className="flex items-center space-x-2" whileHover={{ x: 5 }}>
                       <Github className="w-5 h-5" />
-                      <span>github.com/sarvagyakrcs</span>
+                      <span className="text-sm">github.com/sarvagyakrcs</span>
                     </motion.div>
                     <motion.div className="flex items-center space-x-2" whileHover={{ x: 5 }}>
                       <Linkedin className="w-5 h-5" />
-                      <span>linkedin.com/in/sarvagyakumar</span>
+                      <span className="text-sm">linkedin.com/in/sarvagyakumar</span>
                     </motion.div>
                     <Button onClick={() => setContactOpen(false)} className="w-full">
                       {t.close}
