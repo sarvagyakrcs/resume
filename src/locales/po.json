@@ -1,0 +1,65 @@
+{
+    "name": "Sarvagnya Kumar",
+    "education": "RVCE, Ciência da Computação e Engenharia (Ciência de Dados) '2026",
+    "motto": "Codifique loucamente ou fique assim",
+    "about_me": "Sobre mim",
+    "about_me_points": [
+      "Desenvolvedor full stack especializado em Django, Flask, React e Next.js",
+      "Especialista em desenvolvimento de API e integração com MySQL",
+      "Entusiasta explorando o desenvolvimento em Rust",
+      "Especialista em análise de dados usando Python, NumPy e Pandas",
+      "Cursando Ciência da Computação e Engenharia (Ciência de Dados) na RV College of Engineering"
+    ],
+    "key_competencies": "Principais Competências",
+    "proficient_full_stack": "Desenvolvedor Full Stack Proficiente:",
+    "full_stack_description": "Especializado no desenvolvimento de APIs e integração com MySQL, desenvolvendo aplicações suaves e amigáveis ao usuário com frameworks como Django, Flask, React e Next.js.",
+    "competencies": [
+      "Proficiente em soluções baseadas em dados usando Python, NumPy e Pandas",
+      "Especialista em técnicas de análise e visualização de dados",
+      "Concluiu o curso 'ML A-Z' no Udemy, expandindo o conhecimento em aprendizado de máquina",
+      "Desenvolveu um modelo de aprendizado de máquina preditivo de ações, aplicando habilidades de análise de dados no mundo real",
+      "Interessado em bancos de dados vetoriais e tecnologias LangChain"
+    ],
+    "professional_experience": "Experiência Profissional",
+    "experiences": [
+      {
+        "title": "Estagiário no Centro de Ciência de Dados do IISc",
+        "date": "Abril de 2024",
+        "description": "Instituto Indiano de Ciência (IISc) - Departamento de Computação e Ciência de Dados (CDS)"
+      },
+      {
+        "title": "Estagiário em Desenvolvimento de Software",
+        "date": "Abril de 2024",
+        "description": "Conselho Indiano de Pesquisa e Educação em Silvicultura (ICFRE) - Instituto de Ciência e Tecnologia da Madeira (IWST), Bengaluru"
+      },
+      {
+        "title": "RV Connect - Plataforma de Mídia Social da Faculdade",
+        "date": "Maio de 2023",
+        "description": "Projeto desenvolvido na RV College of Engineering"
+      }
+    ],
+    "education_certifications": "Educação e Certificações",
+    "education_items": [
+      {
+        "title": "Bacharel em Ciência da Computação e Engenharia (Ciência de Dados)",
+        "institution": "RV College of Engineering, Bengaluru"
+      },
+      {
+        "title": "Fundamentos de Rust",
+        "institution": "Universidade de Duke, oferecido pelo Coursera"
+      },
+      {
+        "title": "React",
+        "institution": "Meta, oferecido pelo Coursera"
+      },
+      {
+        "title": "Controle de Versão com Git",
+        "institution": "Atlassian, oferecido pelo Coursera"
+      }
+    ],
+    "extracurricular_activities": "Atividades Extracurriculares",
+    "conference_title": "Conferência de Mindfulness do IIM Bodh Gaya 2022",
+    "conference_description": "Coautor de um artigo apresentado na Conferência Internacional de Mindfulness no IIM Bodh Gaya, Índia",
+    "contact_me": "Contate-me",
+    "close": "Fechar"
+}

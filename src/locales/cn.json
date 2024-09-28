@@ -1,0 +1,65 @@
+{
+    "name": "萨尔瓦尼亚·库马尔",
+    "education": "RVCE，计算机科学与工程（数据科学）'2026",
+    "motto": "疯狂编码，或保持不变",
+    "about_me": "关于我",
+    "about_me_points": [
+      "全栈开发人员，专注于Django、Flask、React和Next.js",
+      "API开发和MySQL集成专家",
+      "Rust开发的爱好者",
+      "熟练使用Python、NumPy和Pandas进行数据分析",
+      "目前在RV工程学院攻读计算机科学与工程（数据科学）学位"
+    ],
+    "key_competencies": "核心能力",
+    "proficient_full_stack": "精通全栈开发:",
+    "full_stack_description": "专注于API开发和MySQL集成，使用Django、Flask、React、Next.js等框架构建流畅且用户友好的应用程序。",
+    "competencies": [
+      "熟练使用Python、NumPy和Pandas提供数据驱动的解决方案",
+      "擅长数据分析和可视化技术",
+      "完成Udemy上的“ML A-Z”课程，扩展了机器学习知识",
+      "开发了一个股票预测机器学习模型，应用于实际数据分析",
+      "对向量数据库和LangChain技术感兴趣"
+    ],
+    "professional_experience": "专业经验",
+    "experiences": [
+      {
+        "title": "IISc数据科学中心实习生",
+        "date": "2024年4月",
+        "description": "印度科学研究所 (IISc) - 计算与数据科学系 (CDS)"
+      },
+      {
+        "title": "软件开发实习生",
+        "date": "2024年4月",
+        "description": "印度林业研究与教育委员会 (ICFRE) - 木材科学与技术研究所 (IWST)，班加罗尔"
+      },
+      {
+        "title": "RV Connect - 大学社交媒体平台",
+        "date": "2023年5月",
+        "description": "由RV工程学院开发的项目"
+      }
+    ],
+    "education_certifications": "教育与认证",
+    "education_items": [
+      {
+        "title": "计算机科学与工程（数据科学）学士",
+        "institution": "RV工程学院，班加罗尔"
+      },
+      {
+        "title": "Rust基础",
+        "institution": "杜克大学，Coursera提供"
+      },
+      {
+        "title": "React",
+        "institution": "Meta，Coursera提供"
+      },
+      {
+        "title": "使用Git的版本控制",
+        "institution": "Atlassian，Coursera提供"
+      }
+    ],
+    "extracurricular_activities": "课外活动",
+    "conference_title": "IIM菩提伽耶2022年正念会议",
+    "conference_description": "作为论文合著者参与在印度IIM菩提伽耶举办的国际正念会议",
+    "contact_me": "联系我",
+    "close": "关闭"
+}

@@ -1,0 +1,65 @@
+{
+    "name": "サルヴァニャ・クマール",
+    "education": "RVCE、コンピュータサイエンスおよびエンジニアリング (データサイエンス) '2026",
+    "motto": "狂ったようにコードを書くか、そのままでいろ",
+    "about_me": "私について",
+    "about_me_points": [
+      "Django、Flask、React、Next.jsに特化したフルスタック開発者",
+      "API開発とMySQL統合のスペシャリスト",
+      "Rustの開発に情熱を持つ",
+      "Python、NumPy、Pandasを使用したデータ分析に熟練",
+      "RVエンジニアリングカレッジでコンピュータサイエンスおよびエンジニアリング(データサイエンス)を専攻中"
+    ],
+    "key_competencies": "主要スキル",
+    "proficient_full_stack": "フルスタック開発に精通:",
+    "full_stack_description": "API開発とMySQL統合に焦点を当て、Django、Flask、React、Next.jsなどのフレームワークでスムーズでユーザーフレンドリーなアプリケーションを構築する能力。",
+    "competencies": [
+      "Python、NumPy、Pandasを使用したデータ主導のソリューションに熟練",
+      "データ分析および可視化技術に精通",
+      "Udemyの「ML A-Z」コースを完了し、機械学習の知識を拡大",
+      "実データを使用して株式予測機械学習モデルを開発",
+      "ベクトルデータベースとLangChain技術に興味"
+    ],
+    "professional_experience": "職務経験",
+    "experiences": [
+      {
+        "title": "IIScデータサイエンスセンターインターン",
+        "date": "2024年4月",
+        "description": "インド科学研究所 (IISc) - コンピューティングおよびデータサイエンス部門 (CDS)"
+      },
+      {
+        "title": "ソフトウェア開発インターン",
+        "date": "2024年4月",
+        "description": "インド林業研究教育委員会 (ICFRE) - 木材科学技術研究所 (IWST), バンガロール"
+      },
+      {
+        "title": "RV Connect - 大学ソーシャルメディアプラットフォーム",
+        "date": "2023年5月",
+        "description": "RVエンジニアリングカレッジで開発されたプロジェクト"
+      }
+    ],
+    "education_certifications": "教育および資格",
+    "education_items": [
+      {
+        "title": "コンピュータサイエンスおよびエンジニアリング(データサイエンス)学士",
+        "institution": "RVエンジニアリングカレッジ、バンガロール"
+      },
+      {
+        "title": "Rust基礎",
+        "institution": "デューク大学、Coursera提供"
+      },
+      {
+        "title": "React",
+        "institution": "Meta、Coursera提供"
+      },
+      {
+        "title": "Gitを使ったバージョン管理",
+        "institution": "Atlassian、Coursera提供"
+      }
+    ],
+    "extracurricular_activities": "課外活動",
+    "conference_title": "IIMボード・ガヤ2022年マインドフルネス・カンファレンス",
+    "conference_description": "インドのIIMボード・ガヤで開催された国際マインドフルネス・カンファレンスで論文の共著者として参加",
+    "contact_me": "お問い合わせ",
+    "close": "閉じる"
+}

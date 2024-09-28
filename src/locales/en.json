@@ -1,0 +1,65 @@
+{
+    "name": "Sarvagya Kumar",
+    "education": "RVCE, Computer Science and Engineering (Data Science) ' 2026",
+    "motto": "Code Insane or Remain Same",
+    "about_me": "ABOUT ME",
+    "about_me_points": [
+      "Passionate Full Stack Developer with expertise in Django, Flask, React, and Next.js",
+      "Proficient in API development and MySQL integration",
+      "Rust enthusiast exploring its capabilities for development enhancement",
+      "Skilled in data analysis using Python, NumPy, and Pandas",
+      "Pursuing Bachelor's in Computer Science and Engineering (Data Science) at R.V. College of Engineering"
+    ],
+    "key_competencies": "KEY COMPETENCIES",
+    "proficient_full_stack": "Proficient Full Stack Developer:",
+    "full_stack_description": "Demonstrated expertise in developing seamless, user-centric applications with a focus on API development, MySQL integration, and proficiency in frameworks such as Django, Flask, React, and Next.js.",
+    "competencies": [
+      "Skilled in data-driven solutions using Python, NumPy, and Pandas",
+      "Proficient in data analysis and visualization techniques",
+      "Completed the \"ML A-Z\" course on Udemy, expanding knowledge in machine learning",
+      "Developed a Stock Predictor machine learning model, demonstrating practical application of data analysis skills",
+      "Enthusiastic about Vector Database and LangChain technologies"
+    ],
+    "professional_experience": "PROFESSIONAL EXPERIENCE",
+    "experiences": [
+      {
+        "title": "Intern at IISc Center for Data Science",
+        "date": "Apr 2024",
+        "description": "Associated With Indian Institute of Science (IISc) - Computational and Data Science Department (CDS)"
+      },
+      {
+        "title": "Software Development Intern",
+        "date": "Apr 2024",
+        "description": "Associated With Indian Council of Forestry Research and Education (ICFRE) - Institute of Wood Science and Technology (IWST), Bangalore"
+      },
+      {
+        "title": "RV Connect - College Social Media Platform",
+        "date": "May-2023",
+        "description": "Associated with RV College Of Engineering"
+      }
+    ],
+    "education_certifications": "EDUCATION & CERTIFICATIONS",
+    "education_items": [
+      {
+        "title": "B.E Computer Science and Engineering (Data Science)",
+        "institution": "R.V. College of Engineering, Bangalore"
+      },
+      {
+        "title": "Rust Fundamentals",
+        "institution": "Duke University, offered through Coursera"
+      },
+      {
+        "title": "React",
+        "institution": "Meta, offered through Coursera"
+      },
+      {
+        "title": "Version Control with Git",
+        "institution": "Atlassian, offered through Coursera"
+      }
+    ],
+    "extracurricular_activities": "EXTRACURRICULAR ACTIVITIES",
+    "conference_title": "IIM Bodhgaya Mindfulness Conference 2022",
+    "conference_description": "Presented and Co-authored a Paper in the International Conference about Mindfulness at IIM Bodhgaya, India",
+    "contact_me": "Contact Me",
+    "close": "Close"
+  }

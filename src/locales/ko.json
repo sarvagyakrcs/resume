@@ -1,0 +1,65 @@
+{
+    "name": "서브냬 쿠마르",
+    "education": "RVCE, 컴퓨터 과학 및 공학 (데이터 과학) '2026",
+    "motto": "미친듯이 코딩하거나 그렇게 남아라",
+    "about_me": "내 소개",
+    "about_me_points": [
+      "Django, Flask, React, Next.js에 특화된 풀스택 개발자",
+      "API 개발 및 MySQL 통합 전문가",
+      "Rust 개발에 열정을 가진 개발자",
+      "Python, NumPy, Pandas를 사용한 데이터 분석에 능숙",
+      "RV College of Engineering에서 컴퓨터 과학 및 공학(데이터 과학) 학위를 취득 중"
+    ],
+    "key_competencies": "핵심 역량",
+    "proficient_full_stack": "풀스택 개발 숙련도:",
+    "full_stack_description": "API 개발 및 MySQL 통합에 중점을 두어 Django, Flask, React, Next.js 같은 프레임워크로 매끄럽고 사용자 친화적인 애플리케이션을 구축하는 능숙함.",
+    "competencies": [
+      "Python, NumPy, Pandas를 사용한 데이터 기반 솔루션 제공",
+      "데이터 분석 및 시각화 기술에 능숙",
+      "Udemy에서 'ML A-Z' 코스를 수료하고 머신러닝에 대한 지식을 확장",
+      "실제 데이터를 사용하여 스톡 예측 머신러닝 모델 개발",
+      "벡터 데이터베이스와 LangChain 기술에 대한 관심"
+    ],
+    "professional_experience": "경력",
+    "experiences": [
+      {
+        "title": "IISc 데이터 과학 센터 인턴",
+        "date": "2024년 4월",
+        "description": "인도 과학 연구소 (IISc) - 컴퓨팅 및 데이터 과학 부서 (CDS)"
+      },
+      {
+        "title": "소프트웨어 개발 인턴",
+        "date": "2024년 4월",
+        "description": "인도 임업 연구 및 교육 위원회 (ICFRE) - 목재 과학 및 기술 연구소 (IWST), 벵갈루루"
+      },
+      {
+        "title": "RV Connect - 대학 소셜 미디어 플랫폼",
+        "date": "2023년 5월",
+        "description": "RV College of Engineering에서 개발된 프로젝트"
+      }
+    ],
+    "education_certifications": "교육 및 자격증",
+    "education_items": [
+      {
+        "title": "컴퓨터 과학 및 공학 (데이터 과학) 학사",
+        "institution": "RV College of Engineering, 벵갈루루"
+      },
+      {
+        "title": "Rust 기초",
+        "institution": "듀크 대학교, Coursera 제공"
+      },
+      {
+        "title": "React",
+        "institution": "Meta, Coursera 제공"
+      },
+      {
+        "title": "Git을 사용한 버전 관리",
+        "institution": "Atlassian, Coursera 제공"
+      }
+    ],
+    "extracurricular_activities": "교외 활동",
+    "conference_title": "IIM Bodh Gaya 마음챙김 컨퍼런스 2022",
+    "conference_description": "IIM Bodh Gaya, 인도에서 열린 국제 마음챙김 컨퍼런스에서 논문 공동 저자로 참여",
+    "contact_me": "문의하기",
+    "close": "닫기"
+}

@@ -1,0 +1,66 @@
+{
+    "name": "Sarvagya Kumar",
+    "education": "RVCE, Ciencia e Ingeniería de la Computación (Ciencia de Datos) '2026",
+    "motto": "Código o permanece igual",
+    "about_me": "Sobre mí",
+    "about_me_points": [
+      "Desarrollador Full Stack apasionado, especializado en Django, Flask, React y Next.js",
+      "Competente en el desarrollo de API y la integración de MySQL",
+      "Entusiasta de Rust, explorando sus capacidades para mejorar el desarrollo",
+      "Hábil en el análisis de datos utilizando Python, NumPy y Pandas",
+      "Estudiando Ciencias de la Computación e Ingeniería (Ciencia de Datos) en RV College of Engineering"
+    ],
+    "key_competencies": "Competencias clave",
+    "proficient_full_stack": "Desarrollador Full Stack competente:",
+    "full_stack_description": "Competencia demostrada en el desarrollo de aplicaciones fluidas y centradas en el usuario utilizando frameworks como Django, Flask, React y Next.js, con un enfoque en el desarrollo de API e integración de MySQL.",
+    "competencies": [
+      "Hábil en soluciones impulsadas por datos utilizando Python, NumPy y Pandas",
+      "Competente en técnicas de análisis y visualización de datos",
+      "Completó el curso \"ML A-Z\" en Udemy, expandiendo su conocimiento en el aprendizaje automático",
+      "Desarrolló un modelo de predicción de acciones utilizando aprendizaje automático, demostrando la aplicación práctica de las habilidades de análisis de datos",
+      "Entusiasta de bases de datos vectoriales y técnicas de LangChain"
+    ],
+    "professional_experience": "Experiencia profesional",
+    "experiences": [
+      {
+        "title": "Intern en el Centro de Ciencia de Datos de IISc",
+        "date": "Abril 2024",
+        "description": "Asociado con el Departamento de Ciencia de Computación y Ciencia de Datos (CDS) del Instituto Indio de Ciencias (IISc)"
+      },
+      {
+        "title": "Intern en Desarrollo de Software",
+        "date": "Abril 2024",
+        "description": "Asociado con el Consejo Indio de Investigación y Educación Forestal (ICFRE) - Instituto de Ciencia y Tecnología de la Madera (IWST), Bangalore"
+      },
+      {
+        "title": "RV Connect - Plataforma de redes sociales de la universidad",
+        "date": "Mayo 2023",
+        "description": "Asociado con el RV College of Engineering"
+      }
+    ],
+    "education_certifications": "Educación y Certificaciones",
+    "education_items": [
+      {
+        "title": "B.E Ciencia e Ingeniería de la Computación (Ciencia de Datos)",
+        "institution": "RV College of Engineering, Bangalore"
+      },
+      {
+        "title": "Fundamentos de Rust",
+        "institution": "Universidad de Duke, ofrecido a través de Coursera"
+      },
+      {
+        "title": "React",
+        "institution": "Meta, ofrecido a través de Coursera"
+      },
+      {
+        "title": "Control de versiones con Git",
+        "institution": "Atlassian, ofrecido a través de Coursera"
+      }
+    ],
+    "extracurricular_activities": "Actividades extracurriculares",
+    "conference_title": "Conferencia de Mindfulness en IIM Bodh Gaya 2022",
+    "conference_description": "Presentó y co-escribió un artículo en la conferencia internacional sobre Mindfulness en IIM Bodh Gaya, India",
+    "contact_me": "Contáctame",
+    "close": "Cerrar"
+  }
+  
