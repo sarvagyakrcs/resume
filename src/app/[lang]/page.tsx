@@ -48,11 +48,8 @@ const languageNames: Record<Lang, string> = {
 }
 
 const avatars = [
-  'https://api.dicebear.com/6.x/adventurer/svg?seed=Felix',
   'https://api.dicebear.com/6.x/adventurer/svg?seed=Aneka',
   'https://api.dicebear.com/6.x/adventurer/svg?seed=Milo',
-  'https://api.dicebear.com/6.x/adventurer/svg?seed=Zoe',
-  'https://api.dicebear.com/6.x/adventurer/svg?seed=Alex',
 ]
 
 export default function Resume({ params }: { params: { lang: Lang } }) {
