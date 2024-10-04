@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { Mail, Phone, Twitter, Github, Linkedin, Moon, Sun, Sparkles, Menu } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
+import { Mail, Phone, Twitter, Github, Linkedin, Moon, Sun, Sparkles, Menu, Download } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
@@ -87,10 +87,19 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
     </Card>
   )
 
+  const handleDownload = () => {
+    const link = document.createElement('a')
+    link.href = 'https://drive.google.com/file/d/1xfUGgNl55d6EzBaMXBMXePfo2M40DwzA/view?usp=sharing'
+    link.download = 'resume_content.txt'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <div className="min-h-screen bg-white text-black dark:bg-slate-900 p-4 sm:p-8 relative overflow-hidden">
       <div className="relative z-10 max-w-4xl mx-auto space-y-6 sm:space-y-8">
-        <motion.div 
+        <motion.div
           className="sticky top-0 bg-background/80 backdrop-blur-sm shadow-sm p-4 z-20 rounded-lg"
           initial={{ y: -100 }}
           animate={{ y: 0 }}
@@ -115,8 +124,8 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
             <div className="hidden sm:flex flex-wrap gap-2">
               {(Object.keys(translations) as Lang[]).map((lang) => (
                 <motion.div key={lang} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button 
-                    onClick={() => handleLanguageChange(lang)} 
+                  <Button
+                    onClick={() => handleLanguageChange(lang)}
                     variant={params.lang === lang ? 'default' : 'outline'}
                     size="sm"
                     className={cnf('dark:text-slate-100', params.lang === lang && 'dark:text-black')}
@@ -126,6 +135,21 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
                 </motion.div>
               ))}
             </div>
+            <Button
+              onClick={() => setContactOpen(true)}
+              size="lg"
+              className="bg-primary m-3 text-primary-foreground hover:bg-primary/90"
+            >
+              {t.contact_me}
+            </Button>
+            <Button
+              onClick={handleDownload}
+              size="lg"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/90"
+            >
+              <Download className="mr-2 h-4 w-4" />
+              Download Resume
+            </Button>
             <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
               <Button
                 variant="ghost"
@@ -188,7 +212,7 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
               ) : (
                 <>
                   <p className="text-xs sm:text-sm text-muted-foreground">{t.education}</p>
-                  <motion.p 
+                  <motion.p
                     className="text-xs sm:text-sm font-semibold"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -217,7 +241,7 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
               <CardContent>
                 <ul className="list-disc pl-5 space-y-1 text-xs sm:text-sm">
                   {t.about_me_points.map((point: string, index: number) => (
-                    <motion.li 
+                    <motion.li
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -252,7 +276,7 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
                   </div>
                   <ul className="list-disc pl-5 space-y-1 text-xs sm:text-sm">
                     {t.competencies.map((competency: string, index: number) => (
-                      <motion.li 
+                      <motion.li
                         key={index}
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -282,7 +306,7 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
               </CardHeader>
               <CardContent className="space-y-4">
                 {t.experiences.map((exp: { title: string; date: string; description: string }, index: number) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -313,7 +337,7 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
                 </CardHeader>
                 <CardContent className="space-y-2">
                   {t.education_items.map((item: { title: string; institution: string }, index: number) => (
-                    <motion.div 
+                    <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -349,14 +373,14 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
           )}
         </div>
 
-        <motion.div 
+        <motion.div
           className="flex justify-center"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <Button 
-            onClick={() => setContactOpen(true)} 
-            size="lg" 
+          <Button
+            onClick={() => setContactOpen(true)}
+            size="lg"
             className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto"
           >
             {t.contact_me}
@@ -365,7 +389,7 @@ export default function Resume({ params }: { params: { lang: Lang } }) {
 
         <AnimatePresence>
           {contactOpen && (
-            <motion.div 
+            <motion.div
               className="fixed inset-0 bg-background/50 backdrop-blur-sm flex items-center justify-center z-50 p-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
